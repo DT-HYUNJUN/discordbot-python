@@ -1,3 +1,4 @@
+import os
 import discord
 from keep_alive import keep_alive
 from discord.ext import commands
@@ -200,5 +201,7 @@ if __name__ == '__main__':  # Ensures this is the file being ran
         bot.load_extension(extension)  # Loades every extension.
 
 keep_alive()  # Starts a webserver to be pinged.
-token = 'MTA3NDM2MDc3NDk1NDM0MDM4Mg.GFu0KL.7hgH7K2oZH14ZaxQUfHse-cwSNFFxRfC-qbfdQ'
+
+token = os.environ['TOKEN']
+
 bot.run(token)  # Starts the bot
